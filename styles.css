@@ -1,0 +1,241 @@
+/* Colors */
+:root {
+    --bg: #ffffff;
+    --gray1: #333333;
+    --gray2: #666666;
+    --gray4: #aaaaaa;
+    --gray5: #eaeaea;
+    --primary1: #007BFF;
+    /* Replace with the actual primary color */
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    overflow: hidden;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 580px;
+    height: 100%;
+    overflow: auto;
+}
+
+#college {
+    display: none;
+}
+
+.cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    transition: transform 0.2s;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+ul li:hover .cursor {transform: scale(1);}
+
+span:hover .cursor {display: block;}
+
+/* Header Styles */
+header {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 580px;
+    top: 0;
+    padding-bottom: 0px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    padding: 4px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-right: 12px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--gray4);
+}
+
+nav ul li.current {
+    border-bottom: 2px solid var(--gray1);
+}
+
+nav ul li.current a {
+    font-weight: bold;
+    color: var(--gray1);
+}
+
+
+/* Intro Section */
+.intro .name {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--gray1);
+    margin-top: 96px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: var(--gray2);
+    margin-top: 8px;
+    margin-bottom: 24px;
+}
+
+.description {
+    font-size: 16px;
+    color: var(--gray1);
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: var(--primary1);
+}
+
+/* 해결해야함 */
+/* .highlight:active #college {
+    display: block;
+} */ 
+
+/* Main Project Section */
+.main-project h2,
+.etc h2 {
+    font-size: 20px;
+    color: var(--gray1);
+    margin-bottom: 10px;
+    margin-top: 72px;
+}
+
+.main-project ul,
+.etc ul {
+    list-style: none;
+    padding: 0;
+}
+
+.main-project li,
+.etc li {
+    font-size: 16px;
+    color: var(--gray1);
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+/* 호버했을 때 위치가 변하는 문제 해결해야함 */
+.main-project li:hover {
+    font-size: 16px;
+    color: var(--gray1);
+    /* margin-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 6px;
+    padding-bottom: 6px; */
+    border-radius: 8px;
+    background-color: var(--gray5);
+}
+
+.date {
+    font-size: 16px;
+    color: var(--gray4);
+    margin-right: 10px;
+}
+
+/* Etc Section */
+.etc {
+    margin-bottom: 40px;
+}
+
+/* Bottom container */
+.bottom-container,
+.bottom-container * {
+  box-sizing: border-box;
+}
+.bottom-container {
+  background: var(--black, #151515);
+  border-radius: 100px;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 8px;
+  left: 50%;
+  margin-left: -108px;
+}
+.favorite-container {
+  padding: 0px 16px 0px 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.favorite-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+.favorite {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+  overflow: visible;
+}
+.etc-item {
+  color: var(--gray7, #f4f4f4);
+  text-align: left;
+  font-family: "Pretendard-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 160%;
+  font-weight: 500;
+  position: relative;
+}
+.subscribe-container {
+  background: var(--gray2, #535353);
+  border-radius: 100px;
+  padding: 8px 16px 8px 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.subscribe-text {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Pretendard-Bold", sans-serif;
+  font-size: 16px;
+  line-height: 160%;
+  font-weight: 700;
+  position: relative;
+}
